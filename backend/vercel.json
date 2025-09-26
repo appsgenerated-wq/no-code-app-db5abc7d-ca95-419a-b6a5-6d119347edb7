@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "buildCommand": "npm install",
+  "builds": [
+    {
+      "src": "node_modules/manifest/dist/manifest/src/main.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "node_modules/manifest/dist/manifest/src/main.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "TOKEN_SECRET_KEY": "776ea8eef3c11cd3f712f62448b43e9464b9add6f65da42e6cba0c21bfa1508d",
+    "BASE_URL": "https://no-code-app-db5abc7d-ca95-419a-b6a5-6d119347edb7.vercel.app",
+    "PORT": "1111",
+    "OPEN_API_DOCS": "true"
+  }
+}
